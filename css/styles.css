@@ -176,6 +176,7 @@ img {
 /* ----------------------------------------------HERO------------------------------------------ */
 
 .hero {
+  width: 1440px;
   background: var(--accent-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
 
@@ -184,7 +185,7 @@ img {
 
 }
 .hero-container {
-  width: 1440px;
+  /* width: 1440px; */
   /* height: 600px;
   padding-top: 188px;
   margin: auto; */
@@ -223,7 +224,10 @@ img {
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   padding: 16px 32px;
   /* padding-bottom: 188px; */
-  margin-left: 635px;
+  /* margin-left: 635px; */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
   transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 .hero-btn:hover,
@@ -583,6 +587,7 @@ clip: rect(0
 .customers-item {
   width: calc((100% - 120px) / 6);
   height: 88px;
+  /* transition: color 250ms var(--cubic), background-color 250ms var(--cubic); */
 }
 
 .customers-link {
@@ -594,11 +599,13 @@ clip: rect(0
   justify-content: center;
   border-radius: 4px;
   color: #8E8F99;
-  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+  transition: color 250ms var(--cubic), border-color 250ms var(--cubic), background-color 250ms var(--cubic);
+  
 }
 
 .customers-icon {
   fill: currentColor;
+  transition: color 250ms var(--cubic), border-color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 /* .customer-link:hover tag-line {
   fill: var(--primery-color);
@@ -618,10 +625,12 @@ clip: rect(0
 } */
 .customers-link:is(:hover, :focus) { 
   border-color: var(--primery-color);
+  color: var(--primery-color);
 } 
 
 .customers-link:is(:hover, :focus) .customers-icon {
   fill: var(--primery-color);
+  border-color: var(--primery-color);
 }
 
 
@@ -759,10 +768,10 @@ clip: rect(0
 }
 
 .button-x:is(:hover, :focus) {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .modal-close {
-  color: #000000;
+  fill: currentColor;
   border-radius: 50%;
   width: 24px;
   height: 24px;
